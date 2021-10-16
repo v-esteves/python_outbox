@@ -3,9 +3,18 @@ services:
     api:
         container_name: registration
         restart: always
-        build: .
+        build: ./sample/registration
         ports:
             - "8080:8080"
+        depends_on: 
+            - redis
+            - rabbitmq
+    dispatcher:
+        container_name: dispatcher
+        restart: always
+        build: ./sample/dispatcher
+        ports:
+            - "18080:18080"
         depends_on: 
             - redis
             - rabbitmq
