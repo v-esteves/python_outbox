@@ -5,7 +5,7 @@ services:
         restart: always
         build: ./sample/registration
         ports:
-            - "8080:8080"
+            - "5000:5000"
         depends_on: 
             - redis
             - rabbitmq
@@ -14,7 +14,7 @@ services:
         restart: always
         build: ./sample/dispatcher
         ports:
-            - "18080:18080"
+            - "8080:8080"
         depends_on: 
             - redis
             - rabbitmq
