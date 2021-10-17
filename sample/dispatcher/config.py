@@ -1,6 +1,8 @@
-"""Flask app configurations"""
-
+[RABBIT]
 RABBITMQ_PORT = 5672
-RABBITMQ_ENDPOINT = 'localhost'
+RABBITMQ_ENDPOINT = 172.17.0.2
+RABBITMQ_QUEUE = newuser
+
+[REDIS]
 REDIS_PORT = 6379
-REDIS_ENDPOINT = 'localhost'
+REDIS_ENDPOINT = 172.17.0.3
